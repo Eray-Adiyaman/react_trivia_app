@@ -3,4 +3,45 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto','Ariel';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #555555;
+  color: #fff;
+}
+
+.Main-Container {
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: rgb(199, 169, 169);
+}
+
+.Navbar-Wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+  color: #555555;
+  
+}
+
+.Question {
+  
+  text-align: center;
+  width: 1000px;
+  margin: 20px auto;
+  height: 700px;
+}
+
+.Question p {
+  margin: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.Question button {
+  margin: 20px;
+  width: 800px;
+  padding: 30px;
+  font-weight: 600;
+  font-size: 20px;
+  border: 1px solid ;
+  border-radius: 5px;
 }
