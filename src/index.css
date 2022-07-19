@@ -15,10 +15,18 @@ body {
 
 .Navbar-Wrapper {
   display: flex;
-  justify-content: center;
+  justify-content:  space-evenly;
+  align-items: center;
   background-color: antiquewhite;
   color: #555555;
   
+}
+
+.Init-Box {
+  text-align: center;
+  width: 1000px;
+  margin: 20px auto;
+  height: 700px;
 }
 
 .Question {
@@ -28,6 +36,7 @@ body {
   margin: 20px auto;
   height: 700px;
 }
+
 
 .Question p {
   margin: 50px;
