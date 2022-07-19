@@ -12,7 +12,7 @@ export default function Initializer() {
 
   return (
     <div className="Init-Box">
-        <h1>initializer</h1>
+        <h1>WELCOME</h1>
         <form>
           <label>Choose a difficulty: </label>
           <select name="difficulty" value={difficulty} onChange={(e)=>handleChange(e)} >

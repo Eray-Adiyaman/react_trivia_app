@@ -22,6 +22,7 @@ body {
   
 }
 
+/* INIT BOX */
 .Init-Box {
   text-align: center;
   width: 1000px;
@@ -29,6 +30,39 @@ body {
   height: 700px;
 }
 
+.Init-Box form {
+  display: grid;
+  font-size: 40px;
+  padding: 30px;
+  margin: 10px;
+}
+.Init-Box select{
+  margin: auto;
+  width: 200px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(27, 109, 185);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 550 ;
+  color: #fff;
+}
+
+
+.Init-Box button {
+  padding: 30px;
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  font-size: 40px;
+  margin: 20px;
+  background-color: rgb(88, 214, 57);
+}
+
+
+/*QUESTIONS */
 .Question {
   
   text-align: center;
