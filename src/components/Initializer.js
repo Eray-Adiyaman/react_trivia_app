@@ -27,7 +27,7 @@ export default function Initializer() {
               <option value="history" >history</option>
           </select>
         </form>
-          <button onClick={StartGame}>Start</button>
+          <button className="standart-button" onClick={StartGame}><span >Start</span></button>
     </div>
   )
 

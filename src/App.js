@@ -6,7 +6,7 @@ import { useTriviaContext } from "./hooks/useTriviaContext";
 
 function App() {
 
-  const {questions,StartGame,turn,setTurn,isAlive,EndGame,counter,setCounter} = useTriviaContext()
+  const {questions,turn,setTurn,isAlive,EndGame,counter,setCounter} = useTriviaContext()
   
   // console.log(questions)
   // console.log(isAlive,turn)

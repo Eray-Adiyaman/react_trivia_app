@@ -8,13 +8,14 @@ export default function EndScreen() {
   return (
     <div className="End-Screen">
       <div className="Score">
+        <p>Thank you for playing!</p>
         <p>Correct Answers : {counter}</p>
         <p>Score: {score}</p>
       </div>
       <div className="Play-Again">
         <h1>Play Again ?</h1>
-        <button onClick={StartGame}>Yes</button>
-        <button onClick={()=>EndGame(1000)} >No</button>
+        <button className="standart-button" onClick={StartGame}><span>Yes</span></button>
+        <button className="standart-button" onClick={()=>EndGame(1000)} ><span>No</span></button>
       </div>
     </div>
   );

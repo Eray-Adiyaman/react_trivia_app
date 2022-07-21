@@ -1,31 +1,33 @@
 body {
-  margin: 0;
+  margin: 40px;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto','Ariel';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #555555;
+  background-color: #d9dcd6;
   color: #fff;
 }
 
 .Main-Container {
-  max-width: 1080px;
+  max-width: 720px;
   margin: 0 auto;
-  background-color: rgb(199, 169, 169);
+  background-color: #3a7ca5;
+  border-radius: 10px;
 }
 
+/*NAVBAR */
 .Navbar-Wrapper {
   display: flex;
   justify-content:  space-evenly;
   align-items: center;
-  background-color: antiquewhite;
-  color: #555555;
-  
+  background-color: #81c3d7;
+  color: #16425b;
+  border-radius: 5px;
 }
 
 /* INIT BOX */
 .Init-Box {
   text-align: center;
-  width: 1000px;
+  width: 720px;
   margin: 20px auto;
   height: 700px;
 }
@@ -58,14 +60,14 @@ body {
   border-radius: 10px;
   font-size: 40px;
   margin: 20px;
-  background-color: rgb(88, 214, 57);
+  background-color: #97dffc;
 }
 
 /*END SCREEN*/
 
 .End-Screen {
   text-align: center;
-  width: 1000px;
+  width: 720px;
   margin: 20px auto;
   height: 700px;
   
@@ -86,13 +88,15 @@ body {
   padding: 20px;
   margin: 10px;  
   font-size: 20px;
+  border: 1px solid black;
+  border-radius:20px ;
+  background-color: #97dffc;
 }
 
 /*QUESTIONS */
 .Question {
-  
   text-align: center;
-  width: 1000px;
+  width: 720px;
   margin: 20px auto;
   height: 700px;
 }
@@ -100,17 +104,71 @@ body {
 
 .Question p {
   margin: 50px;
-  font-size: 20px;
+  max-width: 600px;
+  height: 40px;
+  font-size: 1.8rem;
   font-weight: 500;
-  color: black;
+  color: rgba(255, 255, 255, 0.932);
+}
+
+.p2 {
+  height: 10px !important;
+  font-size: 2rem !important;
+  color: black !important;
 }
 
 .Question button {
   margin: 20px;
-  width: 800px;
+  width: 400px;
   padding: 30px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1rem;
   border: 1px solid ;
-  border-radius: 5px;
+  border-radius: 20px;
+  background-color: #d7e0e6;
+}
+
+
+button {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+/* Standard buttons */
+.standart-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.standart-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.standart-button:hover span {
+  padding-right: 25px;
+}
+.standart-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*Question Answer buttons*/
+.question-button:hover {
+  background-color: #0582ca;
+  color: #fff;
+}
+
+.question-button:active {
+  box-shadow: 0 5px rgb(22, 22, 22);
+  transform: translateY(4px);
+}
+.question-buttonwrong{
+  background-color: red !important;
 }
