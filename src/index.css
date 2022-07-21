@@ -172,3 +172,7 @@ button {
 .question-buttonwrong{
   background-color: red !important;
 }
+
+.toastify {
+  margin-top: 235px;
+}

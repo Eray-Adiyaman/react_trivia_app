@@ -3,7 +3,7 @@ import Initializer from "./components/Initializer";
 import Navbar from "./components/Navbar";
 import Question from "./components/Question";
 import { useTriviaContext } from "./hooks/useTriviaContext";
-import {ToastContainer} from "react-toastify"
+import {ToastContainer,Zoom} from "react-toastify"
 function App() {
 
   const {questions,turn,setTurn,isAlive,EndGame,counter,setCounter} = useTriviaContext()
@@ -20,6 +20,8 @@ function App() {
       : <Initializer /> /* Game init component with Difficulty and Category selection */
       }
       <ToastContainer
+          className={"toastify"}
+          transition={Zoom}
           position="top-center"
           autoClose={10}
           hideProgressBar={true}
