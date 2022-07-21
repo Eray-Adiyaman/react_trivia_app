@@ -3,7 +3,7 @@ import Initializer from "./components/Initializer";
 import Navbar from "./components/Navbar";
 import Question from "./components/Question";
 import { useTriviaContext } from "./hooks/useTriviaContext";
-
+import {ToastContainer} from "react-toastify"
 function App() {
 
   const {questions,turn,setTurn,isAlive,EndGame,counter,setCounter} = useTriviaContext()
@@ -19,6 +19,16 @@ function App() {
       : turn === 9 ? <EndScreen /> /* after reaching 10 questions load endScreen with scoreboard and play Again fields,if no action is taken by the user replace it with Init component after 10 seconds*/
       : <Initializer /> /* Game init component with Difficulty and Category selection */
       }
+      <ToastContainer
+          position="top-center"
+          autoClose={10}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          draggable={false}
+          pauseOnHover={false}
+          />
     </div>
   );
 }

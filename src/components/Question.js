@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 
 
 export default function Question( { quest,turn,setTurn,EndGame,setCounter } ) {
@@ -8,9 +9,6 @@ export default function Question( { quest,turn,setTurn,EndGame,setCounter } ) {
       {answer: quest.results[turn].incorrect_answers[1], correct: false},
       {answer: quest.results[turn].incorrect_answers[2], correct: false}
     ]
-    
-    
-
 
     const handleClick = (e) => {
       if(turn === 9){
@@ -18,6 +16,13 @@ export default function Question( { quest,turn,setTurn,EndGame,setCounter } ) {
       }else{
         if(e.target.value === "true"){
           setCounter(prev => prev+1)
+          toast.success("Correct!", {
+            theme: "colored"
+          })
+        }else{
+          toast.error("Wrong Answer",{
+            theme:"colored"
+          })
         }
           setTurn(prev => prev+1) 
       }
@@ -45,7 +50,7 @@ export default function Question( { quest,turn,setTurn,EndGame,setCounter } ) {
     return randoms;
   }
   const randoms = randomizer([0,1,2,3])
-    // console.log(answers)
+     console.log(answers)
     // console.log(randoms)
  
     // create answer buttons with randomized arrays indexes,this shuffles the answers every question
@@ -63,7 +68,7 @@ export default function Question( { quest,turn,setTurn,EndGame,setCounter } ) {
     <div className="Question">
         <p className="p2">{`Question No: ${turn+1}`}</p>
         <p>{quest.results[turn].question.replace(/&quot;/g,'"').replace(/&#039;/g,"'")}</p>
-        {buttonFunction(answers)}
+        {buttonFunction(answers)}       
     </div>
   )
 }
