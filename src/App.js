@@ -23,7 +23,7 @@ function App() {
           className={"toastify"}
           transition={Zoom}
           position="top-center"
-          autoClose={10}
+          autoClose={1}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick

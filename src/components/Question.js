@@ -10,21 +10,26 @@ export default function Question( { quest,turn,setTurn,EndGame,setCounter } ) {
       {answer: quest.results[turn].incorrect_answers[2], correct: false}
     ]
 
+    const checkAnswer = (e)=>{
+      if(e.target.value === "true"){
+        setCounter(prev => prev+1)
+        toast.success("Correct!", {
+          theme: "colored"
+        })
+      }else{
+        toast.error("Wrong Answer",{
+          theme:"colored"
+        })
+      }
+    }
+
     const handleClick = (e) => {
       if(turn === 9){
-          EndGame();
+        checkAnswer(e)
+        EndGame();
       }else{
-        if(e.target.value === "true"){
-          setCounter(prev => prev+1)
-          toast.success("Correct!", {
-            theme: "colored"
-          })
-        }else{
-          toast.error("Wrong Answer",{
-            theme:"colored"
-          })
-        }
-          setTurn(prev => prev+1) 
+        checkAnswer(e)
+        setTurn(prev => prev+1) 
       }
   }
 
