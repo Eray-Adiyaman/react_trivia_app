@@ -34,7 +34,7 @@ export const TriviaContextProvider = ( { children } ) => {
             setTurn(0)
             setCounter(0)
         }
-        console.log("started game")
+       // console.log("started game")
     }
 
     const EndGame = (timeout) => {

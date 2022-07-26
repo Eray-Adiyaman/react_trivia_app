@@ -55,7 +55,7 @@ export default function Question( { quest,turn,setTurn,EndGame,setCounter } ) {
     return randoms;
   }
   const randoms = randomizer([0,1,2,3])
-     console.log(answers)
+    // console.log(answers)
     // console.log(randoms)
  
     // create answer buttons with randomized arrays indexes,this shuffles the answers every question

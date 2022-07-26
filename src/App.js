@@ -12,7 +12,9 @@ function App() {
   // console.log(isAlive,turn)
 
   return (
+    <>
     <div className="Main-Container">
+      
       <Navbar turn={turn} />
       {isAlive
       ? <Question quest={questions} turn={turn} setTurn={setTurn} EndGame={EndGame} counter={counter} setCounter={setCounter}/> /*if isAlive true start the game,Load Questions Component*/ 
@@ -32,6 +34,16 @@ function App() {
           pauseOnHover={false}
           />
     </div>
+    <footer className="footer-container">
+     <div className="Git-Link">
+          <a href="https://github.com/Eray-Adiyaman/react_trivia_app">
+            <img src="/images/github_icon.png" alt="git-icon"/>
+            GitHub Repo
+          </a>
+      </div>
+      <p>Eray Adıyaman</p>
+    </footer>
+    </>
   );
 }
 
